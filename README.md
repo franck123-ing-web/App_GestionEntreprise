@@ -12,11 +12,11 @@ Un frontend React offrant une interface CRUD simple
 
 Le résultat final permet :
 
-✔ D’importer automatiquement les données depuis les fichiers KBO (CSV)
-✔ De visualiser toutes les entreprises
-✔ D’effectuer des opérations CRUD (Create, Read, Update, Delete)
-✔ De manipuler directement les données MySQL via l’interface web
-✔ D’avoir une base de données propre et normalisée
+. D’importer automatiquement les données depuis les fichiers KBO (CSV)
+. De visualiser toutes les entreprises
+. D’effectuer des opérations CRUD (Create, Read, Update, Delete)
+. De manipuler directement les données MySQL via l’interface web
+. D’avoir une base de données propre et normalisée
 
  Base de données structurée et documentée
 
@@ -36,7 +36,7 @@ Interface (Frontend – React)
 
 Le frontend propose :
 
-✔ Liste des entreprises
+. Liste des entreprises
 
 Avec actions :
 
@@ -46,11 +46,11 @@ Voir
 
 Supprimer
 
-✔ Formulaire d’ajout
+. Formulaire d’ajout
 
 Permet d’ajouter une entreprise dans la BD.
 
-✔ Détails d’une entreprise
+. Détails d’une entreprise
 
 Affiche toutes ses informations.
 
@@ -66,32 +66,32 @@ React	Facile pour créer une interface CRUD moderne
 CSV streaming	Indispensable pour éviter les crash mémoire (fichiers KBO très volumineux)
 
 Opérations CRUD
-✔ Create (Ajout)
+. Create (Ajout)
 
 Le frontend envoie un POST vers :
 
 POST /api/enterprises
 
-✔ Read (Lecture)
+. Read (Lecture)
 
 Liste complète : GET /api/enterprises
 
 Détail : GET /api/enterprises/:id
 
-✔ Update (Modification)
+. Update (Modification)
 PUT /api/enterprises/:id
 
 
 La modification met bien à jour MySQL.
 
-✔ Delete (Suppression)
+. Delete (Suppression)
 DELETE /api/enterprises/:id
 
 
 Suppression directe dans MySQL + mise à jour instantanée du frontend.
 
 Installation & Exécution
-Backend
+ Backend
 cd backend
 npm install
 node loadCsv.js 
