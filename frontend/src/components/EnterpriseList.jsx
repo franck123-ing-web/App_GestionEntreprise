@@ -6,7 +6,7 @@ function EnterpriseList() {
   const [enterprises, setEnterprises] = useState([]);
   const [search, setSearch] = useState("");
 
-  // Charger toutes les entreprises depuis la BD
+  
   const loadEnterprises = async () => {
     try {
       const res = await axios.get("http://localhost:5000/api/enterprises");
@@ -21,12 +21,12 @@ function EnterpriseList() {
     loadEnterprises();
   }, []);
 
-  // Supprimer une entreprise
+  
   const handleDelete = async (id) => {
     if (window.confirm("Voulez-vous vraiment supprimer cette entreprise ?")) {
       try {
         await axios.delete(`http://localhost:5000/api/enterprises/${id}`);
-        // Recharger la liste après suppression
+      
         loadEnterprises();
         alert("Entreprise supprimée avec succès");
       } catch (err) {
@@ -36,7 +36,7 @@ function EnterpriseList() {
     }
   };
 
-  // Filtrer les entreprises par EnterpriseNumber
+  
   const filteredEnterprises = enterprises.filter(ent =>
     ent.EnterpriseNumber.includes(search)
   );
@@ -63,7 +63,12 @@ function EnterpriseList() {
           <tr>
             <th>EnterpriseNumber</th>
             <th>Status</th>
+             <th>JuridicalSituation</th>
             <th>Type</th>
+             <th>JuridicalForm</th>
+              <th>JuridicalFormCAC</th>
+               <th>StartDate</th>
+
             <th>Actions</th>
           </tr>
         </thead>
@@ -73,7 +78,11 @@ function EnterpriseList() {
               <tr key={ent.EnterpriseNumber}>
                 <td>{ent.EnterpriseNumber}</td>
                 <td>{ent.Status}</td>
+                <td>{ent.JuridicalSituation}</td>
                 <td>{ent.TypeOfEnterprise}</td>
+                  <td>{ent.JuridicalForm}</td>
+                   <td>{ent.JuridicalFormCAC}</td>
+                    <td>{ent.StartDate}</td>
                 <td>
                   <Link to={`/detail/${ent.EnterpriseNumber}`}>Détails</Link> |{" "}
                   <Link to={`/edit/${ent.EnterpriseNumber}`}>Éditer</Link> |{" "}
