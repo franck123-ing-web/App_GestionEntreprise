@@ -92,12 +92,12 @@ Suppression directe dans MySQL + mise à jour instantanée du frontend.
 
 Installation & Exécution
  Backend
-cd backend
-npm install
-node loadCsv.js 
-npm start
+.cd backend
+.npm install
+.node loadCsv.js 
+.npm start
 
  Frontend
-cd frontend
-npm install
-npm start
+.cd frontend
+.npm install
+.npm start
