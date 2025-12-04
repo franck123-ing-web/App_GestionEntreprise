@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# React build
+frontend/build/
+
+# CSV volumineux
+backend/CSV/
+
+# Database SQLite ou autres
+*.sqlite
+*.env
